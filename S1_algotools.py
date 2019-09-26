@@ -39,15 +39,17 @@ Exercice 1
 
 som = 0
 n = 0
-moy = 0
+maxi = 0
 nmax = [1,2,3,-4,6,-9]
 
 for i in range(len(nmax)):
-    if nmax[i] > 0:
-        som = som + nmax[i]
-        n = n + 1
+    if nmax[i] > maxi:
+        maxi = nmax[i]
 
-moy = som/n
-print(moy)
+print(maxi)
 print('fini')
+print(' ')
+
+# Table maximum value:
+
 
