@@ -2,7 +2,10 @@
 """
 Éditeur de Spyder
 
-Ceci est un script temporaire.
+@author: David.
 """
 
-# 1er Commit
+print('Hello World')
+
+myVariable = 0
+print('Myvariable = ', myVariable)
