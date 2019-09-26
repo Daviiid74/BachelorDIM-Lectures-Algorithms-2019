@@ -36,20 +36,21 @@ print('Finished')
 """
 Exercice 1
 """
-
+# Valeur max de la table + l'index
 som = 0
 n = 0
 maxi = 0
-nmax = [1,2,3,-4,6,-9]
+index_maxi = 0
+nmax = [1,2,3,-4,6,9]
 
 for i in range(len(nmax)):
     if nmax[i] > maxi:
         maxi = nmax[i]
+        index_maxi = nmax.index(maxi)
 
 print(maxi)
+print(index_maxi)
 print('fini')
 print(' ')
-
-# Table maximum value:
 
 
