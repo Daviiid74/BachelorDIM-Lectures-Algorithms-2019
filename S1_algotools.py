@@ -42,8 +42,15 @@ def max_value(table):
     returns: la valeur max et sont index dans la table
     Raises ValueError if input param is not a list
     """
-    if not(isinstance(table)):
+    #test du type de variable
+    if not(isinstance(table, list)):
         raise ValueError('max_value, doit etre une list')
+    #test si le tableau n'est pas vide
+    if len(table)==0:
+        raise ValueError("Exception Il ne faut pas une liste vide")
+    #test si c'est le bon type de variable dans le tableau
+    if not(isinstance(table[0],(int, float))):
+        raise ValueError("Exception Il ne faut pas une liste vide")
     
     maxi = 0
     index_maxi = 0
