@@ -36,8 +36,15 @@ print('Finished')
 """
 Exercice 1
 """
-# Fonction valeur max de la table + l'index
-def max_value(table:list):
+def max_value(table):
+    """
+    Args: liste des valeurs
+    returns: la valeur max et sont index dans la table
+    Raises ValueError if input param is not a list
+    """
+    if not(isinstance(table)):
+        raise ValueError('max_value, doit etre une list')
+    
     maxi = 0
     index_maxi = 0
     
@@ -50,7 +57,7 @@ def max_value(table:list):
 
 table_test = [1,2,3,4,5,6,7,8,9]
 
-print(max_value(table_test))
+print(max_value(2))
 
 
 
