@@ -36,21 +36,22 @@ print('Finished')
 """
 Exercice 1
 """
-# Valeur max de la table + l'index
-som = 0
-n = 0
-maxi = 0
-index_maxi = 0
-nmax = [1,2,3,-4,6,9]
+# Fonction valeur max de la table + l'index
+def max_value(table:list):
+    maxi = 0
+    index_maxi = 0
+    
+    for i in range(len(table)):
+        if table[i] > maxi:
+            maxi = table[i]
+            index_maxi = table.index(maxi)
+    
+    return maxi, index_maxi
 
-for i in range(len(nmax)):
-    if nmax[i] > maxi:
-        maxi = nmax[i]
-        index_maxi = nmax.index(maxi)
+table_test = [1,2,3,4,5,6,7,8,9]
 
-print(maxi)
-print(index_maxi)
-print('fini')
-print(' ')
+print(max_value(table_test))
+
+
 
 
