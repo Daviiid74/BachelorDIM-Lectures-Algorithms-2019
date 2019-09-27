@@ -41,6 +41,8 @@ def max_value(table):
     Args: liste des valeurs
     returns: la valeur max et sont index dans la table
     Raises ValueError if input param is not a list
+    Raises ValueError if Il ne faut pas une liste vide
+    Raises ValueError if Il ne faut pas une liste vide
     """
     #test du type de variable
     if not(isinstance(table, list)):
@@ -66,6 +68,15 @@ table_test = [1,2,3,4,5,6,7,8,9]
 
 print(max_value(2))
 
+"""
+Reverse a table
+"""
+def reverse_table(table):
+    """
+    Args:
+    returns:
+    R
+    """
 
 
 
