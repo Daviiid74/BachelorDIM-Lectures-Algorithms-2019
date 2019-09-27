@@ -1,38 +1,10 @@
-<<<<<<< HEAD
-# -*- coding: utf-8 -*-
 """
 Éditeur de Spyder
 
 @author: David.
 """
 import numpy as np
-
-
-"""
-Test Git gitHub
-"""
-print('Hello World')
-
-myVariable = 0
-print('Myvariable = ', myVariable)
-
-
-tab_list = [1,2,3,-4,6,-9]
-tab_zeros = np.zeros(12, dtype=np.int32)
-tab_from_list=np.array(tab_list)
-
-Som = 0
-N = 0
-
-
-for id in range(len(tab_from_list)):
-    print('tab['+str(id)+ '=' +str(tab_from_list[id]))
-    print('tab[{index}]={val}'.format(index=id, val=tab_from_list[id]))
-    
-    if tab_from_list[id] >0:
-        print('Youpi')
-
-print('Finished')
+import cv2
 
 """
 Exercice 1
@@ -65,10 +37,6 @@ def max_value(table):
     
     return maxi, index_maxi
 
-table_test = [1,2,3,4,5,6,7,8,9]
-
-print(max_value(2))
-
 """
 Reverse a table
 """
@@ -100,12 +68,38 @@ def reverse_table(table):
     
     return table
 
-table_test = [1,2,3,4,5,6,7,8,9,10]
-print(reverse_table(table_test))
-
 
 """
 Bounding box
 """
+
+img=cv2.imread('image.png',0)
+cv2.imshow('read image', img)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+
+#Création d'une matrice 2D de 10 par 10
+matrix=np.zeros((10,10),dtype=np.int32)
+matrix[3:6, 4:8] = np.ones((3,4),dtype=np.int32)
+
+for idrow in range(matrix.shape[0]):
+    for idcol in range(matrix.shape[1]):
+        pixVal=matrix[idrow,idcol]
+
+print(matrix.shape[0])
+
+
+def roi_bbox(image):
+    """
+    Args: une image noir avec une tache blanche
+    returns: retoune la bbox de la tache blanche
+    """
+    for idrow in range(img.shape[0]):
+        for idcol in range(img.shape[1]):
+            
+    
+    #retourne les coordonnée de chaque angle de ma bbox dans un tableau 4*2
+    return table_coordonne
 
 
