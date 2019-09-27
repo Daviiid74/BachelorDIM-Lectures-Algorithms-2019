@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # -*- coding: utf-8 -*-
 """
 Éditeur de Spyder
@@ -73,10 +74,38 @@ Reverse a table
 """
 def reverse_table(table):
     """
-    Args:
-    returns:
-    R
+    Args: table
+    returns: table inverse
+    Raises ValueError if input param is not a list
+    Raises ValueError if Il ne faut pas une liste vide
+    Raises ValueError if Il ne faut pas une liste vide
     """
+    #test du type de variable
+    if not(isinstance(table, list)):
+        raise ValueError('max_value, doit etre une list')
+    #test si le tableau n'est pas vide
+    if len(table)==0:
+        raise ValueError("Exception Il ne faut pas une liste vide")
+    #test si c'est le bon type de variable dans le tableau
+    if not(isinstance(table[0],(int, float))):
+        raise ValueError("Exception Il ne faut pas une liste vide")
+        
+    index = len(table)
+    turns = int(index/2)
+    for i in range(turns):
+        index = index-1
+        b = table[i]
+        table[i] = table[index]
+        table[index] = b
+    
+    return table
 
+table_test = [1,2,3,4,5,6,7,8,9,10]
+print(reverse_table(table_test))
+
+
+"""
+Bounding box
+"""
 
 
