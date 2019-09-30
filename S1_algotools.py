@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Sep 30 09:04:32 2019
+
+@author: martidav
+"""
+
 """
 Éditeur de Spyder
 
@@ -95,13 +102,29 @@ def roi_bbox(img):
     Args: une image noir avec une tache blanche
     returns: retoune la bbox de la tache blanche
     """
+    top = -1
+    bottom = -1
+    right = -1
+    left = -1
+    
     table_coordonne = [[1,2],[3,4],[5,6],[7,8]]
     print (table_coordonne)
-    for idrow in range(img.shape[0]):
-        for idcol in range(img.shape[1]):
+    for col in range(img.shape[0]):
+        for row in range(img.shape[1]):
+            if img[row,col]==1:
+                if top > row:
+                    top = row
+                if bottom < row:
+                    bottom = row
+                if left < col:
+                    left = col
+                if right > col:
+                    right = col
+    #chercher le top puis break de meme pour le bottom, left, right
+                
+                
             
     
     #retourne les coordonnée de chaque angle de ma bbox dans un tableau 4*2
     return table_coordonne
-
 
