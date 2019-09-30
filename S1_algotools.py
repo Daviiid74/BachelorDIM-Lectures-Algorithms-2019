@@ -90,11 +90,13 @@ for idrow in range(matrix.shape[0]):
 print(matrix.shape[0])
 
 
-def roi_bbox(image):
+def roi_bbox(img):
     """
     Args: une image noir avec une tache blanche
     returns: retoune la bbox de la tache blanche
     """
+    table_coordonne = [[1,2],[3,4],[5,6],[7,8]]
+    print (table_coordonne)
     for idrow in range(img.shape[0]):
         for idcol in range(img.shape[1]):
             
