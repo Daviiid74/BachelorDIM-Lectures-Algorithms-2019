@@ -9,6 +9,7 @@ Test step 2: modifier la ligne 14 en mettant autre chose que 'SEND' dans la vari
 #import urlparse
 import os
 import pika
+import config
 
 
 mode='_SEND' #set 'SEND' mode is you will to send rather than receive messages
@@ -16,10 +17,6 @@ mode='_SEND' #set 'SEND' mode is you will to send rather than receive messages
 
 def callback(ch, method, properties, body):
     print(" [x] Received %r" % body)
-
-
-
-amqp_url='amqp://jalwjmqg:xDVxbg8pr7tJ5X3WPS7aEFvXf0_yTD56@lark.rmq.cloudamqp.com/jalwjmqg'
 
 
 # Parse CLODUAMQP_URL (fallback to localhost)
@@ -39,7 +36,7 @@ if mode == 'SEND':
                           routing_key='hello',
                           body='Hello World!')
                           
-    print(" [x] Sent 'Hello World!'")
+    print(" [x] Sent 'Hello DIM!'")
     
     connection.close()
 else:
