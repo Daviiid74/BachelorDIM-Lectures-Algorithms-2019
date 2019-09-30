@@ -12,7 +12,7 @@ import pika
 import config
 
 
-mode='SEND' #set 'SEND' mode is you will to send rather than receive messages
+mode='_SEND' #set 'SEND' mode is you will to send rather than receive messages
 
 
 def callback(ch, method, properties, body):
@@ -34,7 +34,7 @@ channel.queue_declare(queue='hello')
 if mode == 'SEND':
     channel.basic_publish(exchange='',
                           routing_key='hello',
-                          body='Hello World!')
+                          body='Hello DIM!')
                           
     print(" [x] Sent 'Hello DIM!'")
     
