@@ -12,7 +12,7 @@ import pika
 import config
 
 
-mode='_SEND' #set 'SEND' mode is you will to send rather than receive messages
+mode='SEND' #set 'SEND' mode is you will to send rather than receive messages
 
 
 def callback(ch, method, properties, body):
@@ -20,7 +20,7 @@ def callback(ch, method, properties, body):
 
 
 # Parse CLODUAMQP_URL (fallback to localhost)
-url = os.environ.get('CLOUDAMQP_URL',amqp_url)
+url = os.environ.get('CLOUDAMQP_URL',config.amqp_url)
 params = pika.URLParameters(url)
 params.socket_timeout = 5
 
