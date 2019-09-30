@@ -106,12 +106,9 @@ def roi_bbox(img):
     bottom = -1
     right = -1
     left = -1
-    
-    table_coordonne = [[1,2],[3,4],[5,6],[7,8]]
-    print (table_coordonne)
     for col in range(img.shape[0]):
         for row in range(img.shape[1]):
-            if img[row,col]==1:
+            if img[row,col]==255:
                 if top > row:
                     top = row
                 if bottom < row:
@@ -120,7 +117,12 @@ def roi_bbox(img):
                     left = col
                 if right > col:
                     right = col
+    table_coordonne = [top,bottom,left,right]
     #chercher le top puis break de meme pour le bottom, left, right
     #retourne les coordonnée de chaque angle de ma bbox dans un tableau 4*2
     return table_coordonne
+
+table_test = roi_bbox(img)
+print(table_test)
+
 

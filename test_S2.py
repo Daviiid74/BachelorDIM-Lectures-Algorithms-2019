@@ -19,3 +19,7 @@ def test_reverse_table_working1():
 	tab_list=[1,2,3,4,5,6,7,8,9]
 	test, table_inverse=S1_algotools.reverse_table(tab_list)
 	assert test==[9,8,7,6,5,4,3,2,1]
+
+#test message d'erreur argument qui n'est pas une table
+#test message d'erreur table vide
+#test message d'erreur du bon type de variable dans le tableau
